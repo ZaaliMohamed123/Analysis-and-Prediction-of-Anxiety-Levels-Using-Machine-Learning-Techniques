@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
+    <title>GAD Questionnaire</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label{
+            margin-bottom: 10px;
+        }
+        .form-check{
+            margin-left: 30px;
+        }
+        button{
+            align-items: center;
+            justify-content: center;
+            margin-left: 450px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Generalized Anxiety Disorder Questionnaire</h1>
+        <h5>Over the last 2 weeks, how often have you been bothered by the following problems?</h5>
+        <br>
+        <form id="gadForm" action="{{url_for('index')}}" method="post">
+            <div class="question">
+                <label>1. Feeling nervous, anxious, or on edge</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad1" id="gad1_0" value="0" required>
+                    <label class="form-check-label" for="gad1_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad1" id="gad1_1" value="1">
+                    <label class="form-check-label" for="gad1_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad1" id="gad1_2" value="2">
+                    <label class="form-check-label" for="gad1_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad1" id="gad1_3" value="3">
+                    <label class="form-check-label" for="gad1_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>2. Not being able to stop or control worrying</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad2" id="gad2_0" value="0" required>
+                    <label class="form-check-label" for="gad2_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad2" id="gad2_1" value="1">
+                    <label class="form-check-label" for="gad2_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad2" id="gad2_2" value="2">
+                    <label class="form-check-label" for="gad2_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad2" id="gad2_3" value="3">
+                    <label class="form-check-label" for="gad2_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>3. Worrying too much about different things</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad3" id="gad3_0" value="0" required>
+                    <label class="form-check-label" for="gad3_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad3" id="gad3_1" value="1">
+                    <label class="form-check-label" for="gad3_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad3" id="gad3_2" value="2">
+                    <label class="form-check-label" for="gad3_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad3" id="gad3_3" value="3">
+                    <label class="form-check-label" for="gad3_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>4. Trouble relaxing</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad4" id="gad4_0" value="0" required>
+                    <label class="form-check-label" for="gad4_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad4" id="gad4_1" value="1">
+                    <label class="form-check-label" for="gad4_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad4" id="gad4_2" value="2">
+                    <label class="form-check-label" for="gad4_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad4" id="gad4_3" value="3">
+                    <label class="form-check-label" for="gad4_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>5. Being so restless that it's hard to sit still</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad5" id="gad5_0" value="0" required>
+                    <label class="form-check-label" for="gad5_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad5" id="gad5_1" value="1">
+                    <label class="form-check-label" for="gad5_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad5" id="gad5_2" value="2">
+                    <label class="form-check-label" for="gad5_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad5" id="gad5_3" value="3">
+                    <label class="form-check-label" for="gad5_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>6. Becoming easily annoyed or irritable</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad6" id="gad6_0" value="0" required>
+                    <label class="form-check-label" for="gad6_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad6" id="gad6_1" value="1">
+                    <label class="form-check-label" for="gad6_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad6" id="gad6_2" value="2">
+                    <label class="form-check-label" for="gad6_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad6" id="gad6_3" value="3">
+                    <label class="form-check-label" for="gad6_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>7. Feeling afraid as if something awful might happen</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad7" id="gad7_0" value="0" required>
+                    <label class="form-check-label" for="gad7_0">Not at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad7" id="gad7_1" value="1">
+                    <label class="form-check-label" for="gad7_1">Several days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad7" id="gad7_2" value="2">
+                    <label class="form-check-label" for="gad7_2">Over half the days</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gad7" id="gad7_3" value="3">
+                    <label class="form-check-label" for="gad7_3">Nearly every day</label>
+                </div>
+            </div>
+    
+            <div class="question">
+                <label>If you checked off any problems, how difficult have these made
+                    it for you to do your work, take care of things at home, or get
+                    along with other people?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gade" id="gade_0" value="Not difficult at all" required>
+                    <label class="form-check-label" for="gade_0">Not difficult at all</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gade" id="gade_1" value="Somewhat difficult">
+                    <label class="form-check-label" for="gade_1">Somewhat difficult</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gade" id="gade_2" value="Very difficult">
+                    <label class="form-check-label" for="gade_2">Very difficult</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gade" id="gade_3" value="Extremely difficult">
+                    <label class="form-check-label" for="gade_3">Extremely difficult</label>
+                </div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block">Next Questionnaire</button>
+        </form>
+    </div>
+    
+</body>
+</html>

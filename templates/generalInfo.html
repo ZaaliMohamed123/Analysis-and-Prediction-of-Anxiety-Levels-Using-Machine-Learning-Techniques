@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Information Form</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .form-label {
+            margin-bottom: 5px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        p{
+            margin-left: 20px;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+        .form-check{
+            margin-left: 5px;
+        }
+        button{
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="{{url_for('generalInfo')}}" method="post">
+            <h2 class="text-center mb-4">General Information Form</h2>
+            <h5>Please provide me with some general information about you.</h5>
+            <div class="form-group">
+                <label for="narcissism" class="form-label">To what extent do you agree with this
+                    statement: 'I am a narcissist.' <p>Note: The word •narcissist means egotistical, self-focused and vain.</p></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="narcissism" id="narcissism1"
+                        value="1">
+                    <label class="form-check-label" for="narcissism1">
+                        1 - Not very true of me
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="narcissism" id="narcissism2"
+                        value="2">
+                    <label class="form-check-label" for="narcissism2">
+                        2 - Somewhat true of me
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="narcissism" id="narcissism2"
+                        value="3">
+                    <label class="form-check-label" for="narcissism2">
+                        3 - Moderately true of me
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="narcissism" id="narcissism4"
+                        value="4">
+                    <label class="form-check-label" for="narcissism4">
+                        4 - Mostly true of me
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="narcissism" id="narcissism5"
+                        value="5">
+                    <label class="form-check-label" for="narcissism5">
+                        5 - Very true of me
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="work" class="form-label">Work Status</label>
+                <select class="form-select" id="work" name="work">
+                    <option value="Student">Student</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="degree" class="form-label">Degree</label>
+                <select class="form-select" id="degree" name="degree">
+                    <option value="High School">High School</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="Doctorate">Doctorate</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Get Anxiety Level</button>
+        </form>
+           
+    </div>
+    
+</body>
+</html>

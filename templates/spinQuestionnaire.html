@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
+    <title>SPIN Questionnaire</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .table {
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .table th {
+            text-align: center;
+            justify-content: center;
+
+        }
+        .table input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            display: block;
+        }
+        button{
+            margin-top: 15px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Social Phobia Inventory Questionnaire</h1>
+        <h5>Instructions: 
+            Please read each statement and click in the column that indicates
+            how much the statement applied to you over the past week.</h5>
+        
+        <form action="{{url_for('spinQuestionnaire')}}" method="POST">
+            <br>
+            <table class="table table-bordered">
+            <thead >
+                <tr>
+                <th>Question</th>
+                <th>Not At All</th>
+                <th>A Little Bit</th>
+                <th>Somewhat</th>
+                <th>Very Much</th>
+                <th>Extremely</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1. I am afraid of people in authority.</td>
+                <td><input type="radio" name="spin1" value="0"></td>
+                <td><input type="radio" name="spin1" value="1"></td>
+                <td><input type="radio" name="spin1" value="2"></td>
+                <td><input type="radio" name="spin1" value="3"></td>
+                <td><input type="radio" name="spin1" value="4"></td>
+                </tr>
+                <tr>
+                <td>2. I am bothered by blushing in front of people.</td>
+                <td><input type="radio" name="spin2" value="0"></td>
+                <td><input type="radio" name="spin2" value="1"></td>
+                <td><input type="radio" name="spin2" value="2"></td>
+                <td><input type="radio" name="spin2" value="3"></td>
+                <td><input type="radio" name="spin2" value="4"></td>
+                </tr>
+                <tr>
+                <td>3. Parties and social events scare me.</td>
+                <td><input type="radio" name="spin3" value="0"></td>
+                <td><input type="radio" name="spin3" value="1"></td>
+                <td><input type="radio" name="spin3" value="2"></td>
+                <td><input type="radio" name="spin3" value="3"></td>
+                <td><input type="radio" name="spin3" value="4"></td>
+                </tr>
+                <tr>
+                <td>4. I avoid talking to people I don’t know.</td>
+                <td><input type="radio" name="spin4" value="0"></td>
+                <td><input type="radio" name="spin4" value="1"></td>
+                <td><input type="radio" name="spin4" value="2"></td>
+                <td><input type="radio" name="spin4" value="3"></td>
+                <td><input type="radio" name="spin4" value="4"></td>
+                </tr>
+                <td>5. Being criticized scares me a lot.</td>
+                <td><input type="radio" name="spin5" value="0"></td>
+                <td><input type="radio" name="spin5" value="1"></td>
+                <td><input type="radio" name="spin5" value="2"></td>
+                <td><input type="radio" name="spin5" value="3"></td>
+                <td><input type="radio" name="spin5" value="4"></td>
+                </tr>
+                <td>6. I avoid doing things or speaking to people for fear of embarrassment.</td>
+                <td><input type="radio" name="spin6" value="0"></td>
+                <td><input type="radio" name="spin6" value="1"></td>
+                <td><input type="radio" name="spin6" value="2"></td>
+                <td><input type="radio" name="spin6" value="3"></td>
+                <td><input type="radio" name="spin6" value="4"></td>
+                </tr>
+                <td>7. Sweating in front of people causes me distress.</td>
+                <td><input type="radio" name="spin7" value="0"></td>
+                <td><input type="radio" name="spin7" value="1"></td>
+                <td><input type="radio" name="spin7" value="2"></td>
+                <td><input type="radio" name="spin7" value="3"></td>
+                <td><input type="radio" name="spin7" value="4"></td>
+                </tr>
+                <td>8. I avoid going to parties.</td>
+                <td><input type="radio" name="spin8" value="0"></td>
+                <td><input type="radio" name="spin8" value="1"></td>
+                <td><input type="radio" name="spin8" value="2"></td>
+                <td><input type="radio" name="spin8" value="3"></td>
+                <td><input type="radio" name="spin8" value="4"></td>
+                </tr>
+                <td>9. I avoid activities in which I am the center of attention.</td>
+                <td><input type="radio" name="spin9" value="0"></td>
+                <td><input type="radio" name="spin9" value="1"></td>
+                <td><input type="radio" name="spin9" value="2"></td>
+                <td><input type="radio" name="spin9" value="3"></td>
+                <td><input type="radio" name="spin9" value="4"></td>
+                </tr>
+                <td>10. Talking to strangers scares me.</td>
+                <td><input type="radio" name="spin10" value="0"></td>
+                <td><input type="radio" name="spin10" value="1"></td>
+                <td><input type="radio" name="spin10" value="2"></td>
+                <td><input type="radio" name="spin10" value="3"></td>
+                <td><input type="radio" name="spin10" value="4"></td>
+                </tr>
+                <td>11. I avoid having to give speeches.</td>
+                <td><input type="radio" name="spin11" value="0"></td>
+                <td><input type="radio" name="spin11" value="1"></td>
+                <td><input type="radio" name="spin11" value="2"></td>
+                <td><input type="radio" name="spin11" value="3"></td>
+                <td><input type="radio" name="spin11" value="4"></td>
+                </tr>
+                <td>12. I would do anything to avoid being criticized.</td>
+                <td><input type="radio" name="spin12" value="0"></td>
+                <td><input type="radio" name="spin12" value="1"></td>
+                <td><input type="radio" name="spin12" value="2"></td>
+                <td><input type="radio" name="spin12" value="3"></td>
+                <td><input type="radio" name="spin12" value="4"></td>
+                </tr>
+                <td>13. Heart palpitations bother me when I am around people.</td>
+                <td><input type="radio" name="spin13" value="0"></td>
+                <td><input type="radio" name="spin13" value="1"></td>
+                <td><input type="radio" name="spin13" value="2"></td>
+                <td><input type="radio" name="spin13" value="3"></td>
+                <td><input type="radio" name="spin13" value="4"></td>
+                </tr>
+                <td>14. I am afraid of doing things when people might be watching.</td>
+                <td><input type="radio" name="spin14" value="0"></td>
+                <td><input type="radio" name="spin14" value="1"></td>
+                <td><input type="radio" name="spin14" value="2"></td>
+                <td><input type="radio" name="spin14" value="3"></td>
+                <td><input type="radio" name="spin14" value="4"></td>
+                </tr>
+                <td>15. Being embarrassed or looking stupid are among my worst fears.</td>
+                <td><input type="radio" name="spin15" value="0"></td>
+                <td><input type="radio" name="spin15" value="1"></td>
+                <td><input type="radio" name="spin15" value="2"></td>
+                <td><input type="radio" name="spin15" value="3"></td>
+                <td><input type="radio" name="spin15" value="4"></td>
+                </tr>
+                <td>16. I avoid speaking to anyone in authority.</td>
+                <td><input type="radio" name="spin16" value="0"></td>
+                <td><input type="radio" name="spin16" value="1"></td>
+                <td><input type="radio" name="spin16" value="2"></td>
+                <td><input type="radio" name="spin16" value="3"></td>
+                <td><input type="radio" name="spin16" value="4"></td>
+                </tr>
+                <td>17. Trembling or shaking in front of others is distressing to me.</td>
+                <td><input type="radio" name="spin17" value="0"></td>
+                <td><input type="radio" name="spin17" value="1"></td>
+                <td><input type="radio" name="spin17" value="2"></td>
+                <td><input type="radio" name="spin17" value="3"></td>
+                <td><input type="radio" name="spin17" value="4"></td>
+                </tr>
+                
+            </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Next Questionnaire</button><br>
+        </form>
+    </div>   
+</body>
+</html>
